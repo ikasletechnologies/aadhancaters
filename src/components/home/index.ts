@@ -1,0 +1,5 @@
+export { HeroSection } from './HeroSection'
+export { CateringServices } from './CateringServices'
+export { SignatureMenu } from './SignatureMenu'
+export { WhyChooseUs } from './WhyChooseUs'
+export { HomeCTA } from './HomeCTA'

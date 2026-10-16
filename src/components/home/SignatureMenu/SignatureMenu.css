@@ -1,0 +1,34 @@
+.signature-menu { position: relative; overflow: hidden; padding: 33px 28px 42px; background: radial-gradient(circle at 50% -30%, #a51923, #79040c 56%, #610208); color: #fff8e7; }
+.signature-menu::before { content: ''; position: absolute; inset: 0; opacity: .1; background-image: repeating-linear-gradient(45deg, transparent 0 11px, #f7c16b 12px 13px); }
+.signature-menu__inner { position: relative; z-index: 1; max-width: 1440px; margin: 0 auto; }
+.signature-menu__heading { position: relative; min-height: 82px; display: flex; justify-content: center; text-align: center; }
+.signature-menu h2 { margin: 0; color: #fff2d5; font: 700 clamp(31px, 3vw, 42px)/1.1 Georgia, serif; text-shadow: 0 2px 3px #390105; }
+.signature-menu__heading span { display: block; margin: 5px 0 3px; color: #e9a83e; font-size: 10px; }
+.signature-menu__heading p { margin: 0; color: #f7e4d6; font-size: 14px; }
+.signature-menu__button { position: absolute; top: 4px; right: 0; height: 44px; padding: 0 19px; border: 2px solid #bf9422; border-radius: 14px; display: inline-flex; align-items: center; gap: 8px; color: #f0c84f; text-decoration: none; font-size: 13px; font-weight: 800; transition: background .18s ease, color .18s ease; }
+.signature-menu__button:hover { background: #bd8d19; color: #5e0509; }
+.signature-menu__button svg { width: 17px; }
+.signature-menu__grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
+.menu-card { overflow: hidden; border: 1px solid #d7aa62; border-radius: 13px; background: #fffaf0; color: #251c18; box-shadow: 0 5px 13px rgba(25, 0, 0, .35); transition: transform .2s ease; }
+.menu-card:hover { transform: translateY(-5px); }
+.menu-card__photo { position: relative; height: 158px; background-repeat: no-repeat; background-size: 600% 100%; }
+.menu-card__photo span { position: absolute; top: 9px; right: 8px; padding: 6px 11px; border-radius: 999px; background: linear-gradient(#f8d359, #d79d18); color: #52200c; font-size: 10px; font-weight: 800; box-shadow: 0 2px 5px #34160555; }
+.menu-card__content { min-height: 93px; padding: 11px 14px 14px; }
+.menu-card h3 { margin: 0 0 5px; color: #2d211d; font: 700 16px/1.15 Georgia, serif; }
+.menu-card p { margin: 0; color: #5f554f; font-size: 12px; line-height: 1.35; }
+.signature-menu__pattern { position: absolute; left: -28px; top: -36px; color: #d4a14e; font: 150px/1 Georgia, serif; opacity: .2; }
+
+@media (max-width: 1120px) { .signature-menu__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 720px) {
+  .signature-menu { padding: 38px 18px; }
+  .signature-menu__heading { padding-bottom: 68px; }
+  .signature-menu__heading p { max-width: 460px; margin-inline: auto; line-height: 1.5; }
+  .signature-menu__button { top: auto; right: 50%; bottom: 14px; transform: translateX(50%); white-space: nowrap; }
+  .signature-menu__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 450px) {
+  .signature-menu__grid { grid-template-columns: 1fr; }
+  .menu-card { display: grid; grid-template-columns: 46% 54%; }
+  .menu-card__photo { height: 140px; }
+  .menu-card__content { padding: 24px 13px; }
+}

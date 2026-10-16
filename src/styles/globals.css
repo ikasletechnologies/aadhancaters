@@ -1,17 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --color-primary: #3b82f6;
-  --color-primary-hover: #2563eb;
-  --color-surface: #ffffff;
-  --color-background: #f8fafc;
-  --color-text-primary: #0f172a;
-  --color-text-secondary: #64748b;
-  --color-border: #e2e8f0;
-  --radius-sm: 0.375rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.75rem;
-  --radius-xl: 1rem;
+  --color-background: #fffaf2;
+  --color-text-primary: #2f2925;
 }
 
 body {
@@ -19,26 +10,165 @@ body {
   min-height: 100vh;
   background-color: var(--color-background);
   color: var(--color-text-primary);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+.aadhan-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: 82px;
+  background: #fffaf2;
+  border-top: 3px solid #141414;
+  border-bottom: 1px solid #eadfce;
+  box-shadow: 0 2px 10px rgba(70, 40, 18, 0.07);
 }
 
-::-webkit-scrollbar-track {
-  background: transparent;
+.aadhan-header__inner {
+  position: relative;
+  width: min(1200px, calc(100% - 48px));
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 170px 1fr 190px;
+  align-items: center;
 }
 
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 9999px;
+.aadhan-logo {
+  align-self: start;
+  width: 126px;
+  height: 126px;
+  margin-top: 2px;
+  border: 3px solid #981d24;
+  border-radius: 50%;
+  background: #fffdf8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #981d24;
+  text-decoration: none;
+  box-shadow: 0 3px 9px rgba(95, 27, 25, 0.1);
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
+.aadhan-logo__mark {
+  width: 36px;
+  height: 27px;
+  margin-bottom: -3px;
+  border-radius: 55% 55% 45% 45%;
+  display: grid;
+  place-items: center;
+  background: #ed7800;
+  color: #fff;
+  font: 700 14px/1 Georgia, serif;
+  transform: rotate(-8deg);
+}
+
+.aadhan-logo__name {
+  font: italic 700 25px/1.1 Georgia, serif;
+}
+
+.aadhan-nav {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: clamp(38px, 5vw, 78px);
+  height: 100%;
+}
+
+.aadhan-nav__link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #31323a;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 160ms ease;
+}
+
+.aadhan-nav__link:hover,
+.aadhan-nav__link.is-active {
+  color: #971926;
+  font-weight: 700;
+}
+
+.aadhan-nav__link.is-active::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 13px;
+  width: 43px;
+  height: 2px;
+  background: #b7192c;
+  transform: translateX(-50%);
+}
+
+.aadhan-booking {
+  justify-self: end;
+  min-width: 174px;
+  height: 46px;
+  padding: 0 17px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #97080f;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  box-shadow: 0 5px 12px rgba(151, 8, 15, 0.22);
+  transition: transform 160ms ease, background 160ms ease;
+}
+
+.aadhan-booking:hover { background: #7e070c; transform: translateY(-1px); }
+.aadhan-booking svg { width: 18px; height: 18px; color: #f0aa32; }
+.aadhan-booking__arrow { margin-left: 2px; font-size: 17px; }
+.aadhan-menu-button, .aadhan-mobile-nav { display: none; }
+
+@media (max-width: 760px) {
+  .aadhan-header { height: 68px; }
+  .aadhan-header__inner { width: calc(100% - 32px); grid-template-columns: 90px 1fr; }
+  .aadhan-logo { width: 82px; height: 82px; border-width: 2px; }
+  .aadhan-logo__mark { width: 27px; height: 20px; font-size: 10px; }
+  .aadhan-logo__name { font-size: 18px; }
+  .aadhan-nav, .aadhan-booking { display: none; }
+  .aadhan-menu-button {
+    display: grid;
+    place-items: center;
+    justify-self: end;
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 10px;
+    background: #97080f;
+    color: #fff;
+  }
+  .aadhan-menu-button svg { width: 21px; }
+  .aadhan-mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 26px 22px 18px;
+    background: #fffaf2;
+    border-bottom: 1px solid #eadfce;
+    box-shadow: 0 12px 25px rgba(45, 25, 12, .12);
+  }
+  .aadhan-mobile-nav a { padding: 11px 8px; color: #332c28; text-decoration: none; font-weight: 600; }
+  .aadhan-mobile-nav a.is-active { color: #971926; }
+  .aadhan-mobile-nav .aadhan-mobile-nav__booking {
+    margin-top: 6px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: #97080f;
+    color: white;
+  }
+  .aadhan-mobile-nav__booking svg { width: 17px; }
 }

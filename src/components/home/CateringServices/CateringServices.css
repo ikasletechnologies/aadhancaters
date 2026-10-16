@@ -1,0 +1,33 @@
+.catering-services { position: relative; overflow: hidden; padding: 48px 24px 55px; background: #fffaf2; color: #5d1c1d; }
+.catering-services__inner { position: relative; z-index: 1; max-width: 1440px; margin: 0 auto; text-align: center; }
+.catering-services h2 { margin: 0; font: 700 clamp(31px, 3vw, 42px)/1.1 Georgia, serif; color: #7c1720; }
+.catering-services__flourish { display: block; width: 95px; margin: 7px auto 9px; color: #cf7b34; font-size: 11px; }
+.catering-services__flourish::before, .catering-services__flourish::after { content: ''; display: inline-block; width: 35px; height: 1px; margin: 0 6px 3px; background: #d5a16c; }
+.catering-services__intro { margin: 0 0 22px; color: #645c57; font-size: 15px; }
+.catering-services__grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 14px; }
+.service-card { overflow: hidden; min-width: 0; border: 1px solid #eadfce; border-radius: 14px; background: #fffdf8; box-shadow: 0 5px 14px rgba(74, 42, 21, .12); transition: transform .2s ease, box-shadow .2s ease; }
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 10px 24px rgba(74, 42, 21, .17); }
+.service-card__photo { height: 145px; background-repeat: no-repeat; background-size: 600% 100%; }
+.service-card__body { position: relative; min-height: 192px; padding: 39px 18px 18px; }
+.service-card__icon { position: absolute; top: -25px; left: 50%; width: 52px; height: 52px; border: 3px solid #fffdf8; border-radius: 50%; display: grid; place-items: center; background: #fffdf8; color: #9a1923; transform: translateX(-50%); }
+.service-card__icon svg { width: 29px; height: 29px; stroke-width: 2.1; }
+.service-card h3 { min-height: 40px; margin: 0 0 7px; display: flex; align-items: center; justify-content: center; color: #6f2424; font: 700 17px/1.08 Georgia, serif; }
+.service-card p { min-height: 57px; margin: 0; color: #655d57; font-size: 12px; line-height: 1.35; }
+.service-card a { width: 31px; height: 31px; margin: 13px auto 0; border: 1px solid #c7784e; border-radius: 50%; display: grid; place-items: center; color: #ad4b2c; transition: background .18s ease, color .18s ease; }
+.service-card a:hover { background: #8f151d; color: #fff; }
+.service-card a svg { width: 15px; }
+.catering-services__ornament { position: absolute; top: 35px; color: #e9cfa8; font: 120px/1 Georgia, serif; opacity: .48; }
+.catering-services__ornament--left { left: -15px; transform: rotate(-35deg); }
+.catering-services__ornament--right { right: -15px; transform: scaleX(-1) rotate(-35deg); }
+
+@media (max-width: 1150px) { .catering-services__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 680px) {
+  .catering-services { padding: 42px 18px; }
+  .catering-services__intro { max-width: 440px; margin: 0 auto 24px; line-height: 1.5; }
+  .catering-services__grid { grid-template-columns: 1fr; gap: 18px; }
+  .service-card { display: grid; grid-template-columns: 42% 58%; }
+  .service-card__photo { height: 100%; min-height: 205px; }
+  .service-card__body { min-height: 205px; padding: 29px 15px 14px; }
+  .service-card__icon { top: 8px; left: 0; width: 42px; height: 42px; transform: translateX(-50%); }
+  .service-card__icon svg { width: 23px; }
+}

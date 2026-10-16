@@ -1,0 +1,54 @@
+.hero-section {
+  position: relative;
+  min-height: 610px;
+  overflow: hidden;
+  background: #fff8ed;
+  isolation: isolate;
+}
+
+.hero-section__background { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+.hero-section::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(255,250,242,.98) 0%, rgba(255,250,242,.91) 29%, rgba(255,250,242,.22) 51%, transparent 69%); }
+.hero-section__content { width: min(1200px, calc(100% - 48px)); margin: 0 auto; padding: 72px 0 30px; }
+.hero-section__eyebrow { margin: 0 0 13px; color: #9a3d32; font-size: 13px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; }
+.hero-section h1 { max-width: 470px; margin: 0; color: #69151a; font: 700 clamp(48px, 5vw, 70px)/.91 Georgia, serif; letter-spacing: -2.5px; }
+.hero-section h1 span { display: block; color: #e36f05; }
+.hero-section__description { margin: 20px 0 23px; color: #49403d; font-size: 20px; line-height: 1.25; }
+.hero-section__actions { display: flex; gap: 15px; }
+.hero-section__actions a { height: 50px; padding: 0 23px; border-radius: 12px; display: inline-flex; align-items: center; gap: 11px; text-decoration: none; font-size: 14px; font-weight: 800; transition: transform .18s ease, box-shadow .18s ease; }
+.hero-section__actions a:hover { transform: translateY(-2px); }
+.hero-section__actions svg { width: 19px; }
+.hero-section__primary { background: #94090f; color: #fff; box-shadow: 0 5px 13px rgba(128, 7, 13, .22); }
+.hero-section__primary svg { color: #f0ae3c; }
+.hero-section__primary span { font-size: 18px; }
+.hero-section__secondary { border: 1px solid #b9786e; background: rgba(255,255,255,.62); color: #6b2120; }
+.hero-section__highlights { display: flex; margin-top: 42px; }
+.hero-highlight { min-width: 165px; padding: 0 24px; border-right: 1px solid #dfd0c1; display: flex; align-items: center; gap: 10px; }
+.hero-highlight:first-child { padding-left: 0; }
+.hero-highlight:last-child { border: 0; }
+.hero-highlight svg { width: 31px; height: 31px; color: #c3670b; fill: currentColor; stroke-width: 1.8; }
+.hero-highlight:last-child svg { color: #328b32; }
+.hero-highlight strong, .hero-highlight small { display: block; white-space: nowrap; }
+.hero-highlight strong { color: #7b1820; font-size: 17px; }
+.hero-highlight small { margin-top: 2px; color: #675f5a; font-size: 10px; }
+.hero-section__script { position: absolute; top: 70px; left: 47%; color: #ffe4a4; text-align: center; font: italic 27px/1.28 Georgia, serif; transform: rotate(-5deg); text-shadow: 0 2px 7px #351c0d; }
+.hero-section__seal { position: absolute; top: 54px; right: 4%; width: 126px; aspect-ratio: 1; padding: 20px; border: 3px double #a45a28; border-radius: 45% 50% 44% 52%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f9e9c5; color: #63351f; text-align: center; font: 13px/1.15 Georgia, serif; box-shadow: 0 3px 9px #41200c66; transform: rotate(3deg); }
+
+@media (max-width: 900px) {
+  .hero-section { min-height: 680px; }
+  .hero-section::after { background: linear-gradient(90deg, rgba(255,250,242,.98) 0%, rgba(255,250,242,.9) 45%, rgba(255,250,242,.2) 100%); }
+  .hero-section__script, .hero-section__seal { display: none; }
+}
+
+@media (max-width: 640px) {
+  .hero-section { min-height: 680px; }
+  .hero-section__background { object-position: 62% center; opacity: .42; }
+  .hero-section::after { background: linear-gradient(180deg, #fffaf2 0%, rgba(255,250,242,.89) 58%, rgba(255,250,242,.2) 100%); }
+  .hero-section__content { width: calc(100% - 36px); padding-top: 62px; }
+  .hero-section__eyebrow { font-size: 10px; letter-spacing: 2.5px; }
+  .hero-section h1 { max-width: 360px; font-size: clamp(43px, 13vw, 60px); }
+  .hero-section__description { font-size: 17px; }
+  .hero-section__actions { flex-direction: column; align-items: stretch; max-width: 310px; }
+  .hero-section__actions a { justify-content: center; }
+  .hero-section__highlights { gap: 15px; margin-top: 34px; overflow-x: auto; }
+  .hero-highlight { min-width: 145px; padding: 0 14px 0 0; }
+}

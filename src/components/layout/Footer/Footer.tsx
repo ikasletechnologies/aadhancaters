@@ -1,24 +1,59 @@
-import React from 'react'
+import { Camera, ChefHat, Globe2, Heart, Mail, MapPin, MessageCircle, Phone, Play } from 'lucide-react'
+import './Footer.css'
 
+const quickLinks = ['Home', 'About', 'Services', 'Contact']
+const services = ['Wedding Catering', 'Corporate Events', 'Birthday Parties', 'House Warming', 'Outdoor Events', 'Traditional Feasts']
 const CURRENT_YEAR = new Date().getFullYear()
 
-export const Footer: React.FC = () => {
+export function Footer() {
   return (
-    <footer className="w-full border-t border-slate-200 bg-white py-6 px-4 sm:px-6 mt-auto">
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
-        <p>© {CURRENT_YEAR} Aadhan. All rights reserved.</p>
-        <div className="flex items-center gap-6">
-          <a href="#privacy" className="hover:text-slate-800 transition-colors">
-            Privacy Policy
-          </a>
-          <a href="#terms" className="hover:text-slate-800 transition-colors">
-            Terms of Service
-          </a>
-          <div className="flex items-center gap-2">
-            <span className="h-2 w-2 rounded-full bg-emerald-500" />
-            <span>Systems Normal</span>
+    <footer className="site-footer">
+      <div className="site-footer__main">
+        <div className="site-footer__brand">
+          <div className="site-footer__logo">
+            <ChefHat aria-hidden="true" />
+            <strong>A</strong><span>adhan<small>CATERERS</small></span>
           </div>
+          <p>Crafting Grand South Indian Feasts</p>
         </div>
+
+        <div className="site-footer__column">
+          <h3>Quick Links</h3>
+          <nav aria-label="Footer navigation">
+            {quickLinks.map((link) => <a key={link} href={`#${link.toLowerCase()}`}>{link}</a>)}
+          </nav>
+        </div>
+
+        <div className="site-footer__column">
+          <h3>Our Services</h3>
+          <nav aria-label="Catering services">
+            {services.map((service) => <a key={service} href="#services">{service}</a>)}
+          </nav>
+        </div>
+
+        <div className="site-footer__column site-footer__contact">
+          <h3>Contact Us</h3>
+          <a href="tel:+919876543210"><Phone /> +91 98765 43210</a>
+          <a href="tel:+918765432109"><Phone /> +91 87654 32109</a>
+          <a href="mailto:info@aadhancaterers.in"><Mail /> info@aadhancaterers.in</a>
+          <span><MapPin /> Chennai, Tamil Nadu, India</span>
+        </div>
+
+        <div className="site-footer__follow">
+          <h3>Follow Us</h3>
+          <div className="site-footer__socials">
+            <a href="#facebook" aria-label="Facebook"><Globe2 /></a>
+            <a href="#instagram" aria-label="Instagram"><Camera /></a>
+            <a href="#youtube" aria-label="YouTube"><Play /></a>
+            <a href="#whatsapp" aria-label="WhatsApp"><MessageCircle /></a>
+          </div>
+          <p>Good Food<br />Happy People <Heart aria-hidden="true" /></p>
+        </div>
+      </div>
+
+      <div className="site-footer__bottom">
+        <span>© {CURRENT_YEAR} Aadhan Caterers. All rights reserved.</span>
+        <span>Tradition <i>•</i> Taste <i>•</i> Togetherness</span>
       </div>
     </footer>
   )

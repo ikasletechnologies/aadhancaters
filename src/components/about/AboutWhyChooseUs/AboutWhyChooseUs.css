@@ -1,0 +1,30 @@
+.about-why { position: relative; overflow: hidden; padding: 40px 28px 48px; background: radial-gradient(circle at 55% 10%, #fffdf8, #fff8ee 75%); }
+.about-why::after { content: '✺'; position: absolute; right: 25%; top: -58px; color: #e8d5b6; font: 220px/1 Georgia, serif; opacity: .18; }
+.about-why__inner { position: relative; z-index: 3; width: min(1240px, 100%); margin: 0 auto; }
+.about-why__eyebrow { margin: 0 0 10px 95px; color: #9a2630; font-size: 11px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; }
+.about-why h2 { margin: 0 0 25px 95px; color: #2e211e; font: 700 clamp(35px, 3.8vw, 50px)/.98 Georgia, serif; letter-spacing: -1px; }
+.about-why h2 svg { width: 25px; height: 25px; color: #388d35; fill: #388d35; transform: rotate(15deg); }
+.about-why__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 15px; }
+.about-why__card { min-height: 150px; padding: 20px 18px 16px; border: 1px solid #eee1d1; border-radius: 13px; background: rgba(255,253,248,.95); text-align: center; box-shadow: 0 5px 14px rgba(85,49,26,.1); transition: transform .2s ease, box-shadow .2s ease; }
+.about-why__card:hover { transform: translateY(-5px); box-shadow: 0 10px 22px rgba(85,49,26,.15); }
+.about-why__card > svg { width: 39px; height: 39px; margin-bottom: 7px; color: #a44516; fill: currentColor; stroke-width: 1.8; }
+.about-why__card h3 { margin: 0 0 7px; color: #352a26; font-size: 15px; }
+.about-why__card p { max-width: 175px; margin: 0 auto; color: #6b625d; font-size: 11px; line-height: 1.4; }
+.about-why__leaf { position: absolute; z-index: 2; width: 98px; height: 235px; border-radius: 100% 0 100% 0; background: repeating-linear-gradient(168deg, transparent 0 15px, rgba(255,255,255,.28) 16px 18px), linear-gradient(105deg, #1c6d25, #5bab3b 48%, #176020); }
+.about-why__leaf--left { left: -4px; top: -95px; transform: rotate(38deg); }
+.about-why__leaf--right { right: 84px; top: -112px; transform: scaleX(-1) rotate(38deg); }
+.about-why__food { position: absolute; z-index: 1; right: -55px; top: -68px; width: 260px; height: 205px; overflow: hidden; border-radius: 0 0 0 70%; transform: rotate(9deg); box-shadow: 0 8px 18px rgba(69,38,17,.18); }
+.about-why__food img { width: 600%; height: 100%; object-fit: cover; transform: translateX(-83.33%); }
+
+@media (max-width: 1000px) { .about-why__grid { grid-template-columns: repeat(3, 1fr); } .about-why__food { opacity: .45; } }
+@media (max-width: 650px) {
+  .about-why { padding: 48px 18px; }
+  .about-why__eyebrow, .about-why h2 { margin-left: 0; text-align: center; }
+  .about-why__eyebrow { margin-top: 35px; }
+  .about-why h2 br { display: none; }
+  .about-why__grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .about-why__card:last-child { grid-column: 1 / -1; width: calc(50% - 6px); justify-self: center; }
+  .about-why__food { width: 155px; height: 120px; opacity: .38; }
+  .about-why__leaf--right { right: 30px; }
+}
+@media (max-width: 390px) { .about-why__grid { grid-template-columns: 1fr; } .about-why__card:last-child { grid-column: auto; width: auto; } }

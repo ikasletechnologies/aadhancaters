@@ -1,27 +1,55 @@
-import { useState } from 'react'
-import { MainLayout } from '@/layouts'
-import { DashboardPage, ComponentsShowcasePage } from '@/pages'
+import { useState, useEffect } from 'react'
+import { Navbar } from '@/components/layout/Navbar'
+import { Footer } from '@/components/layout/Footer'
+import { CateringServices, HeroSection, HomeCTA, SignatureMenu, WhyChooseUs } from '@/components/home'
+import { AboutPage } from '@/pages/AboutPage'
 
 export function App() {
-  const [activeNav, setActiveNav] = useState('dashboard')
+  const [isAboutPage, setIsAboutPage] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return (
+        window.location.pathname === '/about' ||
+        window.location.hash.toLowerCase() === '#about'
+      )
+    }
+    return false
+  })
+
+  useEffect(() => {
+    const handleLocationChange = () => {
+      setIsAboutPage(
+        window.location.pathname === '/about' ||
+        window.location.hash.toLowerCase() === '#about'
+      )
+    }
+
+    window.addEventListener('hashchange', handleLocationChange)
+    window.addEventListener('popstate', handleLocationChange)
+
+    return () => {
+      window.removeEventListener('hashchange', handleLocationChange)
+      window.removeEventListener('popstate', handleLocationChange)
+    }
+  }, [])
 
   return (
-    <MainLayout activeNavId={activeNav} onSelectNav={setActiveNav}>
-      {activeNav === 'dashboard' && <DashboardPage />}
-      {activeNav === 'components' && <ComponentsShowcasePage />}
-      {activeNav === 'users' && (
-        <div className="py-12 text-center">
-          <h2 className="text-xl font-semibold text-slate-800">Team & Users Module</h2>
-          <p className="text-slate-500 mt-2">Connect to your user management API or backend service.</p>
-        </div>
-      )}
-      {activeNav === 'settings' && (
-        <div className="py-12 text-center">
-          <h2 className="text-xl font-semibold text-slate-800">Workspace Settings</h2>
-          <p className="text-slate-500 mt-2">Configure project preferences, notifications, and security policies.</p>
-        </div>
-      )}
-    </MainLayout>
+    <div className="min-h-screen bg-[#fffaf2]">
+      <Navbar />
+      <main aria-label="Aadhan website content">
+        {isAboutPage ? (
+          <AboutPage />
+        ) : (
+          <>
+            <HeroSection />
+            <CateringServices />
+            <SignatureMenu />
+            <WhyChooseUs />
+            <HomeCTA />
+          </>
+        )}
+      </main>
+      <Footer />
+    </div>
   )
 }
 
