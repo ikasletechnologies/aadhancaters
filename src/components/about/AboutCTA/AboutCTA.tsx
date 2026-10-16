@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+﻿import React, { useState, useEffect } from 'react'
 import {
   ArrowRight,
   X,
@@ -261,13 +261,13 @@ export function AboutCTA() {
                   {/* Instant Contact Options */}
                   <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                     <a
-                      href="tel:+919876543210"
+                      href="tel:+919043000223"
                       className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#63050e] text-white text-xs font-bold hover:bg-[#4f040b] transition-colors"
                     >
                       <Phone className="w-4 h-4" /> Call Specialist Now
                     </a>
                     <a
-                      href={`https://wa.me/919876543210?text=Hi%20Aadhan%20Caterers,%20I%20just%20submitted%20booking%20${bookingRef}%20for%20${formData.eventType}`}
+                      href={`https://wa.me/919043000223?text=Hi%20Aadhan%20Caterers,%20I%20just%20submitted%20booking%20${bookingRef}%20for%20${formData.eventType}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-[#059669] text-white text-xs font-bold hover:bg-[#047857] transition-colors"
@@ -326,7 +326,7 @@ export function AboutCTA() {
                         id="phone"
                         type="tel"
                         name="phone"
-                        placeholder="e.g. +91 98765 43210"
+                        placeholder="e.g. +91 90430 00223"
                         value={formData.phone}
                         onChange={handleInputChange}
                         className={`w-full px-3.5 py-2 text-sm bg-white border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f4be52] ${
@@ -510,7 +510,7 @@ export function AboutCTA() {
                       )}
                     </button>
                     <p className="text-[11px] text-center text-[#8c674b] mt-2">
-                      ✦ Guaranteed fresh ingredients & live traditional cooking support
+                      âœ¦ Guaranteed fresh ingredients & live traditional cooking support
                     </p>
                   </div>
                 </form>
@@ -522,3 +522,4 @@ export function AboutCTA() {
     </section>
   )
 }
+

@@ -33,6 +33,9 @@
 .hero-section__script { position: absolute; top: 70px; left: 47%; color: #ffe4a4; text-align: center; font: italic 27px/1.28 Georgia, serif; transform: rotate(-5deg); text-shadow: 0 2px 7px #351c0d; }
 .hero-section__seal { position: absolute; top: 54px; right: 4%; width: 126px; aspect-ratio: 1; padding: 20px; border: 3px double #a45a28; border-radius: 45% 50% 44% 52%; display: flex; flex-direction: column; align-items: center; justify-content: center; background: #f9e9c5; color: #63351f; text-align: center; font: 13px/1.15 Georgia, serif; box-shadow: 0 3px 9px #41200c66; transform: rotate(3deg); }
 
+.hero-section__script,
+.hero-section__seal { display: none !important; }
+
 @media (max-width: 900px) {
   .hero-section { min-height: 680px; }
   .hero-section::after { background: linear-gradient(90deg, rgba(255,250,242,.98) 0%, rgba(255,250,242,.9) 45%, rgba(255,250,242,.2) 100%); }

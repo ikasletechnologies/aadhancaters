@@ -6,9 +6,12 @@ import { AboutPage } from '@/pages/AboutPage'
 import { ContactPage } from '@/pages/ContactPage'
 import { ServicesPage } from '@/pages/ServicesPage'
 import { MenuPage } from '@/pages/MenuPage'
+import { Seo } from '@/components/common/Seo/Seo'
+
+type Page = 'home' | 'about' | 'services' | 'menu' | 'contact'
 
 export function App() {
-  const [page, setPage] = useState(() => {
+  const [page, setPage] = useState<Page>(() => {
     if (typeof window !== 'undefined') {
       if (window.location.pathname === '/contact' || window.location.hash.toLowerCase() === '#contact') return 'contact'
       if (window.location.pathname === '/services') return 'services'
@@ -51,6 +54,7 @@ export function App() {
 
   return (
     <div className="min-h-screen bg-[#fffaf2]">
+      <Seo page={page} />
       <Navbar />
       <main aria-label="Aadhan website content">
         {page === 'about' ? (
