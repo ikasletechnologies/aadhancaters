@@ -21,6 +21,9 @@
 .site-footer__follow > p svg { width: 18px; height: 18px; vertical-align: bottom; }
 .site-footer__bottom { min-height: 46px; padding: 0 max(42px, calc((100% - 1400px)/2 + 42px)); border-top: 1px solid rgba(230, 174, 65, .27); display: flex; align-items: center; justify-content: space-between; color: #cfbcb2; font-size: 9px; }
 .site-footer__bottom i { padding: 0 10px; color: #d6a526; font-style: normal; }
+.site-footer__bottom nav { display: flex; align-items: center; gap: 18px; }
+.site-footer__bottom nav a { color: #cfbcb2; text-decoration: none; transition: color .25s ease; }
+.site-footer__bottom nav a:hover { color: #e8ba45; }
 
 @media (max-width: 960px) { .site-footer__main { grid-template-columns: 1.2fr 1fr 1fr; } .site-footer__follow { grid-column: 3; } }
 @media (max-width: 640px) {
@@ -30,6 +33,7 @@
   .site-footer__follow { text-align: center; }
   .site-footer__socials { justify-content: center; }
   .site-footer__bottom { padding: 14px 24px; flex-direction: column; justify-content: center; gap: 8px; text-align: center; }
+  .site-footer__bottom nav { flex-wrap: wrap; justify-content: center; gap: 8px 16px; }
 }
 
 /* Correct the portrait-canvas logo and balance the footer layout */

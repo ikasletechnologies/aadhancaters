@@ -15,6 +15,87 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html { scroll-behavior: smooth; }
+
+/* Shared motion system */
+@keyframes aadhanFadeUp {
+  from { opacity: 0; transform: translate3d(0, 28px, 0); }
+  to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+
+@keyframes aadhanHeroIn {
+  from { opacity: 0; transform: scale(1.035); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes aadhanSoftPulse {
+  0%, 100% { box-shadow: 0 7px 18px rgba(151, 8, 15, .18); }
+  50% { box-shadow: 0 10px 27px rgba(151, 8, 15, .31); }
+}
+
+.aadhan-reveal {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0);
+  transition: opacity .72s cubic-bezier(.22, 1, .36, 1),
+              transform .72s cubic-bezier(.22, 1, .36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.aadhan-reveal.is-visible { opacity: 1; transform: none; }
+
+.hero-section__background,
+.about-hero__image,
+.contact-hero__image,
+.menu-hero__image {
+  animation: aadhanHeroIn 1.15s cubic-bezier(.22, 1, .36, 1) both;
+}
+
+main h1,
+main h2,
+main h3,
+main p,
+main form,
+main [class*='card'] {
+  transition: transform .32s ease, box-shadow .32s ease, border-color .32s ease;
+}
+
+main [class*='card']:hover { transform: translateY(-5px); }
+
+button,
+a[class*='button'],
+a[class*='btn'],
+.aadhan-booking,
+.enquiry-form__submit {
+  transition: transform .22s ease, box-shadow .22s ease, background-color .22s ease, color .22s ease !important;
+}
+
+button:hover,
+a[class*='button']:hover,
+a[class*='btn']:hover,
+.enquiry-form__submit:hover {
+  transform: translateY(-2px);
+}
+
+button:active,
+a[class*='button']:active,
+a[class*='btn']:active,
+.enquiry-form__submit:active { transform: translateY(0) scale(.98); }
+
+.aadhan-booking { animation: aadhanSoftPulse 3.2s ease-in-out infinite; }
+
+img { transition: transform .65s cubic-bezier(.22, 1, .36, 1); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+  }
+  .aadhan-reveal { opacity: 1; transform: none; }
+}
+
 /* Aadhan typography system */
 h1 { font-family: 'Cormorant Garamond', Georgia, serif !important; font-weight: 700 !important; }
 h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif !important; font-weight: 600 !important; }
