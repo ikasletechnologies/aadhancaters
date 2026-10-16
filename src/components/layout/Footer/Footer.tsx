@@ -2,7 +2,7 @@ import logo from '@/assets/images/Aadhan footer.svg'
 import { Heart, Mail, MapPin, Phone } from 'lucide-react'
 import './Footer.css'
 
-const quickLinks = ['Home', 'About', 'Services', 'Contact']
+const quickLinks = ['Home', 'About', 'Menu', 'Services', 'Contact']
 const services = ['Wedding Catering', 'Corporate Events', 'Birthday Parties', 'House Warming', 'Outdoor Events', 'Traditional Feasts']
 const CURRENT_YEAR = new Date().getFullYear()
 const socialLinks = [
@@ -24,6 +24,7 @@ export function Footer() {
     <div className='site-footer__bottom'>
       <span>© {CURRENT_YEAR} Aadhan Caterers. All rights reserved.</span>
       <nav aria-label='Legal links'><a href='/faq'>FAQ</a><a href='/terms'>Terms &amp; Conditions</a><a href='/privacy-policy'>Privacy Policy</a></nav>
+      <span className='site-footer__credit'>Crafted and Maintained by <a href='https://ikasleinnovations.com' target='_blank' rel='noopener noreferrer'>Ikasle Business Group</a></span>
       <span>Tradition <i>•</i> Taste <i>•</i> Togetherness</span>
     </div>
   </footer>

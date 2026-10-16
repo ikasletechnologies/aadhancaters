@@ -112,6 +112,22 @@ button, .aadhan-booking, .hero-section__actions a, .menu-hero__content > a, .enq
   display: none !important;
 }
 
+/* Remove pale radial / starburst decorations across every page */
+.about-hero__ornament,
+.our-story__ornament,
+.about-stats__pattern,
+.why-choose-us__mandala,
+.signature-menu__pattern,
+.contact-hero__mandala {
+  display: none !important;
+}
+
+.about-why::after,
+.about-cta::before {
+  content: none !important;
+  display: none !important;
+}
+
 /* Consistent hero sizing across Home, About, Services, Menu and Contact */
 .hero-section,
 .about-hero,

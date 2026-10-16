@@ -24,6 +24,9 @@
 .site-footer__bottom nav { display: flex; align-items: center; gap: 18px; }
 .site-footer__bottom nav a { color: #cfbcb2; text-decoration: none; transition: color .25s ease; }
 .site-footer__bottom nav a:hover { color: #e8ba45; }
+.site-footer__credit { color: #cfbcb2; white-space: nowrap; }
+.site-footer__credit a { margin-left: 4px; color: #f0b51d; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; transition: color .25s ease; }
+.site-footer__credit a:hover { color: #ffd15c; }
 
 @media (max-width: 960px) { .site-footer__main { grid-template-columns: 1.2fr 1fr 1fr; } .site-footer__follow { grid-column: 3; } }
 @media (max-width: 640px) {

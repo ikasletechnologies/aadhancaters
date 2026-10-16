@@ -15,7 +15,7 @@ export function AboutHero() {
         </p>
         <a href="/services" className="about-hero__button">Our Services <ArrowRight aria-hidden="true" /></a>
       </div>
-      <p className="about-hero__script" aria-hidden="true">Good<br />Food<br />Brings<br />People<br />Together ♡</p>
+      {/* <p className="about-hero__script" aria-hidden="true">Good<br />Food<br />Brings<br />People<br />Together ♡</p> */}
     </section>
   )
 }
