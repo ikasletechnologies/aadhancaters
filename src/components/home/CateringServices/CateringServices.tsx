@@ -34,7 +34,7 @@ export function CateringServices() {
                 <div className="service-card__icon"><Icon aria-hidden="true" /></div>
                 <h3>{title}</h3>
                 <p>{description}</p>
-                <a href={`#${title.toLowerCase().replaceAll(' ', '-')}`} aria-label={`Explore ${title}`}>
+                <a href="/contact#enquiry" aria-label={`Enquire about ${title}`}>
                   <ArrowRight aria-hidden="true" />
                 </a>
               </div>

@@ -28,3 +28,7 @@
   .about-why__leaf--right { right: 30px; }
 }
 @media (max-width: 390px) { .about-why__grid { grid-template-columns: 1fr; } .about-why__card:last-child { grid-column: auto; width: auto; } }
+
+/* Remove the top-right food crop and its decorative background */
+.about-why__food { display: none !important; }
+.about-why::after { content: none !important; display: none !important; }

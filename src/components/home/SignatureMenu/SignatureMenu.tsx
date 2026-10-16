@@ -22,7 +22,7 @@ export function SignatureMenu() {
             <span aria-hidden="true">◆</span>
             <p>A delightful range of authentic South Indian delicacies, prepared with tradition and the finest ingredients.</p>
           </div>
-          <a href="#full-menu" className="signature-menu__button">View Full Menu <ArrowRight aria-hidden="true" /></a>
+          <a href="/menu" className="signature-menu__button">View Full Menu <ArrowRight aria-hidden="true" /></a>
         </div>
 
         <div className="signature-menu__grid">

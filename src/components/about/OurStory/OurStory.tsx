@@ -14,7 +14,7 @@ export function OurStory() {
           <div className="our-story__eyebrow"><span>Our Story</span><i>✤</i></div>
           <h2 id="our-story-title">Rooted in Tradition,<br />Inspired by People</h2>
           <p>Aadhan Caterers was born from a simple idea — to share the richness of South Indian flavours with every celebration. What started as a humble effort has now grown into a trusted catering service, known for authentic taste, hygiene and exceptional service.</p>
-          <a href="/#services">Our Services <ArrowRight aria-hidden="true" /></a>
+          <a href="/services">Our Services <ArrowRight aria-hidden="true" /></a>
         </div>
 
         <div className="our-story__gallery">

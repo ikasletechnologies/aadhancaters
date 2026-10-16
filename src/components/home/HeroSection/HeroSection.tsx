@@ -22,10 +22,10 @@ export function HeroSection() {
         </p>
 
         <div className="hero-section__actions">
-          <a className="hero-section__primary" href="#book-catering">
+          <a className="hero-section__primary" href="/contact#enquiry">
             <CalendarDays aria-hidden="true" /> Book Catering <span>→</span>
           </a>
-          <a className="hero-section__secondary" href="#menu">
+          <a className="hero-section__secondary" href="/menu">
             <ChefHat aria-hidden="true" /> Explore Menu
           </a>
         </div>

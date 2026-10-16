@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react'
-import heroImage from '@/assets/images/south-indian-hero.png'
+import heroImage from '@/assets/images/south-indian-hero1.png'
 import './AboutHero.css'
 
 export function AboutHero() {
@@ -13,7 +13,7 @@ export function AboutHero() {
         <p className="about-hero__description">
           At Aadhan Caterers, we believe food is more than a meal — it&apos;s an emotion that brings people together. With a passion for authentic South Indian cuisine, we create memorable dining experiences for weddings, corporate events, house warming ceremonies and all special occasions.
         </p>
-        <a href="/#services" className="about-hero__button">Our Services <ArrowRight aria-hidden="true" /></a>
+        <a href="/services" className="about-hero__button">Our Services <ArrowRight aria-hidden="true" /></a>
       </div>
       <p className="about-hero__script" aria-hidden="true">Good<br />Food<br />Brings<br />People<br />Together ♡</p>
     </section>

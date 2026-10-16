@@ -2,11 +2,8 @@
 .site-footer__main { max-width: 1400px; margin: 0 auto; padding: 28px 42px 22px; display: grid; grid-template-columns: 1.35fr .65fr .9fr 1.15fr .85fr; gap: 55px; }
 .site-footer h3 { margin: 0 0 12px; color: #d6a526; font-size: 13px; }
 .site-footer__brand { align-self: start; text-align: center; }
-.site-footer__logo { position: relative; display: flex; align-items: flex-end; justify-content: center; color: #fff; }
-.site-footer__logo > svg { position: absolute; top: -13px; left: 34%; width: 35px; height: 35px; color: #ef970f; fill: #ef970f; stroke: #ef970f; }
-.site-footer__logo > strong { font: italic 70px/.8 Georgia, serif; }
-.site-footer__logo > span { margin-left: -12px; font: 28px/1 Georgia, serif; }
-.site-footer__logo small { display: block; margin-top: 2px; font: 7px/1 sans-serif; letter-spacing: 3px; }
+.site-footer__logo { display: inline-flex; padding: 6px 12px; border-radius: 10px; background: #fffaf2; }
+.site-footer__logo img { display: block; width: 130px; height: auto; }
 .site-footer__brand > p { margin: 9px 0 0; color: #d3a431; font-size: 10px; }
 .site-footer__column nav { display: grid; gap: 7px; }
 .site-footer__column a, .site-footer__contact span { color: #eaded7; text-decoration: none; font-size: 11px; transition: color .16s ease; }
@@ -17,8 +14,9 @@
 .site-footer__contact svg { width: 14px; height: 14px; color: #fff; fill: #fff; }
 .site-footer__follow h3 { margin-bottom: 14px; }
 .site-footer__socials { display: flex; gap: 18px; }
-.site-footer__socials a { color: #fff; }
-.site-footer__socials svg { width: 17px; height: 17px; }
+.site-footer__socials a { width: 25px; height: 25px; display: grid; place-items: center; border-radius: 6px; color: #fff; transition: color .18s ease, background .18s ease, transform .18s ease; }
+.site-footer__socials a:hover { color: #f1be43; background: rgba(255,255,255,.08); transform: translateY(-2px); }
+.site-footer__socials svg { width: 18px; height: 18px; fill: currentColor; }
 .site-footer__follow > p { margin: 18px 0 0; color: #dfb740; font: italic 22px/1.05 cursive; transform: rotate(-4deg); }
 .site-footer__follow > p svg { width: 18px; height: 18px; vertical-align: bottom; }
 .site-footer__bottom { min-height: 46px; padding: 0 max(42px, calc((100% - 1400px)/2 + 42px)); border-top: 1px solid rgba(230, 174, 65, .27); display: flex; align-items: center; justify-content: space-between; color: #cfbcb2; font-size: 9px; }

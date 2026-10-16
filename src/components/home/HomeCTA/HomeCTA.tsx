@@ -27,7 +27,7 @@ export function HomeCTA() {
             <li key={label}><Icon aria-hidden="true" /><span>{label}</span></li>
           ))}
         </ul>
-        <a href="#enquire-now">
+        <a href="/contact#enquiry">
           <CalendarDays aria-hidden="true" /> Enquire Now <ArrowRight aria-hidden="true" />
         </a>
       </div>

@@ -10,9 +10,94 @@ body {
   min-height: 100vh;
   background-color: var(--color-background);
   color: var(--color-text-primary);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Aadhan typography system */
+h1 { font-family: 'Cormorant Garamond', Georgia, serif !important; font-weight: 700 !important; }
+h2, h3 { font-family: 'Cormorant Garamond', Georgia, serif !important; font-weight: 600 !important; }
+p, li, label, input, select, textarea { font-family: 'Poppins', sans-serif; font-weight: 400; }
+button, .aadhan-booking, .hero-section__actions a, .menu-hero__content > a, .enquiry-form__submit { font-family: 'Poppins', sans-serif !important; font-weight: 600 !important; }
+.aadhan-nav__link, .aadhan-mobile-nav a { font-family: 'Poppins', sans-serif; font-weight: 500; }
+.aadhan-nav__link.is-active, .aadhan-nav__link:hover { font-weight: 600; }
+.hero-section__script, .contact-hero__script, .contact-faq__visual blockquote span { font-family: 'Great Vibes', cursive !important; font-weight: 400 !important; }
+
+/* About page: remove decorative corner leaves */
+.about-stats__leaf,
+.about-why__leaf,
+.our-story__leaf {
+  display: none !important;
+}
+
+/* Consistent hero sizing across Home, About, Services, Menu and Contact */
+.hero-section,
+.about-hero,
+.contact-hero,
+.menu-hero {
+  height: 610px;
+  min-height: 610px;
+  max-height: 610px;
+}
+
+.hero-section__background,
+.about-hero__image,
+.contact-hero__image,
+.menu-hero__image {
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 1300px) {
+  .hero-section,
+  .about-hero,
+  .contact-hero,
+  .menu-hero {
+    height: 560px;
+    min-height: 560px;
+    max-height: 560px;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-section,
+  .about-hero,
+  .contact-hero,
+  .menu-hero {
+    height: 650px;
+    min-height: 650px;
+    max-height: 650px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-section,
+  .about-hero,
+  .contact-hero,
+  .menu-hero {
+    height: 680px;
+    min-height: 680px;
+    max-height: 680px;
+  }
+}
+
+@media (min-width: 901px) {
+  .hero-section,
+  .about-hero,
+  .contact-hero,
+  .menu-hero {
+    height: 560px !important;
+    min-height: 560px !important;
+    max-height: 560px !important;
+  }
+
+  .hero-section__background,
+  .about-hero__image,
+  .contact-hero__image,
+  .menu-hero__image {
+    height: 560px !important;
+  }
 }
 
 .aadhan-header {
@@ -21,7 +106,7 @@ body {
   z-index: 50;
   height: 82px;
   background: #fffaf2;
-  border-top: 3px solid #141414;
+  border-top: 0;
   border-bottom: 1px solid #eadfce;
   box-shadow: 0 2px 10px rgba(70, 40, 18, 0.07);
 }
@@ -32,43 +117,12 @@ body {
   height: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 170px 1fr 190px;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
 }
 
-.aadhan-logo {
-  align-self: start;
-  width: 126px;
-  height: 126px;
-  margin-top: 2px;
-  border: 3px solid #981d24;
-  border-radius: 50%;
-  background: #fffdf8;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #981d24;
-  text-decoration: none;
-  box-shadow: 0 3px 9px rgba(95, 27, 25, 0.1);
-}
-
-.aadhan-logo__mark {
-  width: 36px;
-  height: 27px;
-  margin-bottom: -3px;
-  border-radius: 55% 55% 45% 45%;
-  display: grid;
-  place-items: center;
-  background: #ed7800;
-  color: #fff;
-  font: 700 14px/1 Georgia, serif;
-  transform: rotate(-8deg);
-}
-
-.aadhan-logo__name {
-  font: italic 700 25px/1.1 Georgia, serif;
-}
+.aadhan-logo { display: flex; align-items: center; }
+.aadhan-logo img { display: block; height: 56px; width: auto; }
 
 .aadhan-nav {
   display: flex;
@@ -132,10 +186,8 @@ body {
 
 @media (max-width: 760px) {
   .aadhan-header { height: 68px; }
-  .aadhan-header__inner { width: calc(100% - 32px); grid-template-columns: 90px 1fr; }
-  .aadhan-logo { width: 82px; height: 82px; border-width: 2px; }
-  .aadhan-logo__mark { width: 27px; height: 20px; font-size: 10px; }
-  .aadhan-logo__name { font-size: 18px; }
+  .aadhan-header__inner { width: calc(100% - 32px); height: 100%; grid-template-columns: 1fr auto; }
+  .aadhan-logo img { height: 44px; }
   .aadhan-nav, .aadhan-booking { display: none; }
   .aadhan-menu-button {
     display: grid;

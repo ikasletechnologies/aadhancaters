@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { CalendarDays, Menu, X } from 'lucide-react'
+import logo from '@/assets/images/aadhan-logo.svg'
 
 const navigation = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Services', href: '/#services' },
-  { label: 'Contact', href: '/#contact' },
+  { label: 'Services', href: '/services' },
+  { label: 'Menu', href: '/menu' },
+  { label: 'Contact', href: '/contact' },
 ]
 
 export interface NavbarProps {
@@ -13,7 +15,7 @@ export interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = () => {
-  const [activeItem, setActiveItem] = useState(window.location.pathname === '/about' ? 'About' : 'Home')
+  const [activeItem, setActiveItem] = useState(window.location.pathname === '/menu' ? 'Menu' : window.location.pathname === '/about' ? 'About' : window.location.pathname === '/contact' ? 'Contact' : window.location.pathname === '/services' ? 'Services' : 'Home')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const selectItem = (item: string) => {
@@ -24,9 +26,8 @@ export const Navbar: React.FC<NavbarProps> = () => {
   return (
     <header className="aadhan-header">
       <div className="aadhan-header__inner">
-        <a href="#home" className="aadhan-logo" aria-label="Aadhan home">
-          <span className="aadhan-logo__mark">A</span>
-          <span className="aadhan-logo__name">Aadhan</span>
+        <a href="/" className="aadhan-logo" aria-label="Aadhan Caterers home">
+          <img src={logo} alt="Aadhan Caterers" />
         </a>
 
         <nav className="aadhan-nav" aria-label="Primary navigation">
@@ -42,7 +43,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
           ))}
         </nav>
 
-        <a href="#book-catering" className="aadhan-booking">
+        <a href="/contact#enquiry" className="aadhan-booking">
           <CalendarDays aria-hidden="true" />
           <span>Book Catering</span>
           <span className="aadhan-booking__arrow" aria-hidden="true">→</span>
@@ -72,7 +73,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
               {item.label}
             </a>
           ))}
-          <a href="#book-catering" className="aadhan-mobile-nav__booking" onClick={() => setIsMenuOpen(false)}>
+          <a href="/contact#enquiry" className="aadhan-mobile-nav__booking" onClick={() => setIsMenuOpen(false)}>
             <CalendarDays aria-hidden="true" /> Book Catering →
           </a>
         </nav>
