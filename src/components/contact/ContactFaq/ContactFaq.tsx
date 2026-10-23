@@ -6,7 +6,7 @@ const faqs = [
  { question: 'How far in advance should I book?', answer: 'We recommend booking at least 2–4 weeks in advance. For weddings and large celebrations, earlier booking helps us reserve your preferred date.' },
  { question: 'Do you offer customized menus?', answer: 'Yes. We tailor every menu to your event, guest preferences, budget and dietary requirements.' },
  { question: 'Do you provide both vegetarian and non-vegetarian menus?', answer: 'Yes, we offer extensive vegetarian and non-vegetarian selections, prepared and handled with dedicated care.' },
- { question: 'Do you cater outside Chennai?', answer: 'Yes. We serve Chennai and nearby locations; contact our team with your venue details to confirm availability.' },
+ { question: 'Do you cater outside Coimbatore?', answer: 'Yes. We serve Coimbatore and nearby locations; contact our team with your venue details to confirm availability.' },
 ]
 export function ContactFaq(){
  const [openItem,setOpenItem]=useState<number|null>(null)

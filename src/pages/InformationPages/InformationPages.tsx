@@ -6,7 +6,7 @@ const faqs = [
   ['How early should I book Aadhan Caterers?', 'For weddings and large events, booking 4–8 weeks ahead is recommended. Smaller functions can often be arranged with shorter notice, subject to availability.'],
   ['Do you provide customized menus?', 'Yes. We tailor the dishes, serving style and package to your occasion, guest count, preferences and budget.'],
   ['Do you offer vegetarian and non-vegetarian food?', 'Yes. We offer dedicated vegetarian and non-vegetarian menus and follow careful preparation and service practices.'],
-  ['Which locations do you serve?', 'We cater across Chennai and nearby locations. Contact us with your venue details so we can confirm availability and logistics.'],
+  ['Which locations do you serve?', 'We cater across Coimbatore and nearby locations. Contact us with your venue details so we can confirm availability and logistics.'],
   ['Can you handle live counters and traditional service?', 'Yes. Live counters, buffet service and traditional banana-leaf dining can be arranged based on your event requirements.'],
   ['How do I request a quotation?', 'Use the enquiry form or WhatsApp us at +91 90430 00223 with your event date, location, guest count and preferred menu.'],
 ]

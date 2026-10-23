@@ -464,7 +464,7 @@ export function AboutCTA() {
                       id="location"
                       type="text"
                       name="location"
-                      placeholder="e.g. Chennai, Madurai, Coimbatore, Bangalore"
+                      placeholder="e.g. Coimbatore, Madurai, Coimbatore, Bangalore"
                       value={formData.location}
                       onChange={handleInputChange}
                       className="w-full px-3.5 py-2 text-sm bg-white border border-[#dfc9b0] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#f4be52]"

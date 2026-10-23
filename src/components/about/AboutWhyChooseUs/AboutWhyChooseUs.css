@@ -1,5 +1,4 @@
 .about-why { position: relative; overflow: hidden; padding: 40px 28px 48px; background: radial-gradient(circle at 55% 10%, #fffdf8, #fff8ee 75%); }
-.about-why::after { content: '✺'; position: absolute; right: 25%; top: -58px; color: #e8d5b6; font: 220px/1 Georgia, serif; opacity: .18; }
 .about-why__inner { position: relative; z-index: 3; width: min(1240px, 100%); margin: 0 auto; }
 .about-why__eyebrow { margin: 0 0 10px 95px; color: #9a2630; font-size: 11px; font-weight: 800; letter-spacing: 4px; text-transform: uppercase; }
 .about-why h2 { margin: 0 0 25px 95px; color: #2e211e; font: 700 clamp(35px, 3.8vw, 50px)/.98 Georgia, serif; letter-spacing: -1px; }
@@ -31,4 +30,3 @@
 
 /* Remove the top-right food crop and its decorative background */
 .about-why__food { display: none !important; }
-.about-why::after { content: none !important; display: none !important; }

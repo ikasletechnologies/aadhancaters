@@ -23,21 +23,6 @@
   color: #fff4dd;
 }
 
-/* Subtle background kolam / mandala watermark pattern */
-.about-cta::before {
-  content: '✺';
-  position: absolute;
-  z-index: 0;
-  left: 42%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  color: #e4a855;
-  font: 200px/1 Georgia, serif;
-  opacity: 0.08;
-  pointer-events: none;
-  user-select: none;
-}
-
 /* Far right temple gopuram watermark & top-right banana leaves */
 .about-cta__right-bg {
   position: absolute;

@@ -1,5 +1,4 @@
 .home-cta { position: relative; isolation: isolate; max-width: 1490px; min-height: 190px; margin: 26px auto; padding: 20px 22px 20px 72px; border: 1px solid #a34736; border-radius: 20px; overflow: hidden; display: grid; grid-template-columns: 42% 25% 33%; align-items: center; background: radial-gradient(circle at 48% 50%, #a20e18 0, #79030b 44%, #670108 100%); box-shadow: 0 7px 18px rgba(74, 20, 12, .2); color: #fff6df; }
-.home-cta::before { content: '✺'; position: absolute; z-index: -1; left: 38%; top: 1px; color: #e4a855; font: 165px/1 Georgia, serif; opacity: .15; }
 .home-cta__copy { position: relative; z-index: 2; }
 .home-cta__copy > p { margin: 0 0 9px; color: #efd0ac; font-size: 11px; font-weight: 700; letter-spacing: 5px; text-transform: uppercase; }
 .home-cta__copy h2 { margin: 0; color: #fff1d3; font: 700 clamp(30px, 3vw, 44px)/.98 Georgia, serif; text-shadow: 0 2px 2px #3f0004; }

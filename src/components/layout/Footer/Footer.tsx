@@ -18,7 +18,7 @@ export function Footer() {
       <div className='site-footer__brand'><a href='/' className='site-footer__logo' aria-label='Aadhan Caterers home'><img src={logo} alt='Aadhan Caterers' /></a><p>Crafting Grand South Indian Feasts</p></div>
       <div className='site-footer__column'><h3>Quick Links</h3><nav aria-label='Footer navigation'>{quickLinks.map(link => <a key={link} href={`/${link === 'Home' ? '' : link.toLowerCase()}`}>{link}</a>)}</nav></div>
       <div className='site-footer__column'><h3>Our Services</h3><nav aria-label='Catering services'>{services.map(service => <a key={service} href='/services'>{service}</a>)}</nav></div>
-      <div className='site-footer__column site-footer__contact'><h3>Contact Us</h3><a href='tel:+919043000223'><Phone /> +91 90430 00223</a><a href='mailto:info@aadhancaterers.in'><Mail /> info@aadhancaterers.in</a><span><MapPin /> Chennai, Tamil Nadu, India</span></div>
+      <div className='site-footer__column site-footer__contact'><h3>Contact Us</h3><a href='tel:+919043000223'><Phone /> +91 90430 00223</a><a href='mailto:info@aadhancaterers.in'><Mail /> info@aadhancaterers.in</a><span><MapPin /> Coimbatore, Tamil Nadu, India</span></div>
       <div className='site-footer__follow'><h3>Follow Us</h3><div className='site-footer__socials'>{socialLinks.map(social => <a key={social.label} href={social.href} target='_blank' rel='noreferrer' aria-label={social.label}><svg viewBox='0 0 24 24' aria-hidden='true'><path d={social.path} /></svg></a>)}</div><p>Good Food<br />Happy People <Heart aria-hidden='true' /></p></div>
     </div>
     <div className='site-footer__bottom'>

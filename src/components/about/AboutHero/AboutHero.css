@@ -10,7 +10,6 @@
 .about-hero__button:hover { transform: translateY(-2px); background: #76070c; }
 .about-hero__button svg { width: 17px; }
 .about-hero__script { position: absolute; top: 76px; left: 49%; color: #fff3ce; text-align: center; font: italic 25px/1.18 cursive; text-shadow: 0 2px 6px #2f180a; transform: rotate(-6deg); }
-.about-hero__ornament { position: absolute; left: -51px; top: 13px; color: #e4c49c; font: 235px/1 Georgia, serif; opacity: .28; }
 .about-hero::before { content: none; }
 
 @media (max-width: 900px) { .about-hero__script { display: none; } .about-hero::after { background: linear-gradient(90deg, #fffaf2 0%, rgba(255,250,242,.93) 50%, rgba(255,250,242,.3) 100%); } }
